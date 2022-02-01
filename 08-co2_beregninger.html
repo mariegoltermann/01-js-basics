@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>timer?</p>
+    <input type="text" id="timer" />
+    <button>klik og beregn Co2 udslip, se i konsolen</button>
+    <script>
+      document.querySelector("button").addEventListener("click", buttonClicked);
+      function buttonClicked() {
+        let timer = document.querySelector("#timer").value;
+        let Co2 = 109;
+        //let areal = længde * bredde;
+        let resultat = `flytiden er ${timer} timer og Co2 udslippet pr kg er ${Co2}. Co2 udledt i kg er ${co2UdledtIKgVedFlyrejse(
+          timer,
+          Co2
+        )}`;
+        console.log(resultat);
+      }
+      function co2UdledtIKgVedFlyrejse(t, c) {
+        return t * c;
+      }
+    </script>
+  </body>
+</html>
